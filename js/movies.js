@@ -48977,7 +48977,7 @@ var elMoviesItemTemplate = document.querySelector('#movies-item-template').conte
 
 var elMoviesListFragment = document.createDocumentFragment();
 
-for (var movie of movies.splice(0, 100)) {
+for (var movie of movies.slice(0, 100)) {
 	var elMovie = elMoviesItemTemplate.cloneNode(true);
 
 	elMovie.querySelector('.movie__img').src = `http://i3.ytimg.com/vi/${movie.ytid}/maxresdefault.jpg`;
@@ -48991,3 +48991,4 @@ for (var movie of movies.splice(0, 100)) {
 }
 
 elMoviesList.appendChild(elMoviesListFragment);
+
